@@ -3,7 +3,7 @@ package com.codewithmoshjava;
 import java.text.NumberFormat;
 import java.util.Scanner;
 
-public class Main{
+public class Currnecy{
     public static void main(String[] args){
         final byte MONTHLY_IN_YEAR =12;
         final byte PERCENT   = 100;
