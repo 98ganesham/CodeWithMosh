@@ -94,6 +94,48 @@ public class countvowels{
                     toLowerCase();
         }
         return String.join(" ", words);
+    }
+
+    //AnagramsUsingSorting
+    public static boolean areAnagrams(String first, String second){
+        if(first == null || second == null)
+            return false;
+        var array1 = first.toLowerCase().toCharArray();
+        Arrays.sort(array1);
+        var array2 = second.toLowerCase().toCharArray();
+        Arrays.sort(array2);
+        return Arrays.equals(array1, array2);
+    }
+
+    //Anagrams-Using Histogramming
+    public static boolean areAnagramsHistogram(String first, String second){
+        if(first  == null || second == null)
+            return false;
+        int ENGLISH_ALPHABET = 26;
+        int [] frequencies = new int[ENGLISH_ALPHABET];
+        first= first.toLowerCase();
+        for(var i = 0; i < first.length(); i++)
+            frequencies [first.charAt(i) - 'a']++;
+        second = second.toLowerCase();
+        for(var i =0; i < second.length(); i++) {
+            var index = second.charAt(i) - 'a';
+            if(frequencies[index] == 0)
+                return false;
+            frequencies[ index]--;
+        }
+        return true;
+    }
+    //Palindrome
+    public static boolean isPalindrome(String word){
+                if(word ==null)
+                    return false;
+                int left = 0;
+               int right = word.length()-1;
+               while(left < right)
+                   if(word.charAt(left++) != word.charAt(right--))
+                       return false;
+               return true;
+
 
 
     }
