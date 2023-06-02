@@ -1,4 +1,4 @@
-package com.codewithmosh1;
+package com.codewithmosh;
 
 public class Heaps {
     private int[] items = new int[10];
@@ -15,7 +15,7 @@ public class Heaps {
         items[0] = items[--size];
         var index = 0;
         while
-          ( index<= size &&!isValidParent(index) ){
+          ( index <= size &&!isValidParent(index) ){
             var largerChildIndex= largerChildIndex(index);
             swap(index, largerChildIndex);
             index = largerChildIndex;
@@ -81,6 +81,9 @@ public class Heaps {
         items[first] = items[second];
         items [second] = temp;
 
+    }
+    public int max(){
+        return items[0];
     }
 }
 

@@ -1,15 +1,19 @@
 package com.codewithmosh1;
-
-    public class Main{
-        public static void main(String[] args) {
-            var heap = new Heaps();
-            heap.insert(10);
-            heap.insert(5);
-            heap.insert(17);
-            heap.insert(4);
-            heap.insert(22);
-            heap.remove();
-            System.out.println("Done");
+import java.util.*;
+public class Main{
+    public static void main(String [] args) {
+        var graph = new WeightedGraph();
+        graph.addNode("A");
+        graph.addNode("B");
+        graph.addNode("C");
+        graph.addEdge("A", "B", 0);
+        graph.addEdge("B", "C", 0);
+        graph.addEdge("C", "A", 0);
+//        graph.addEdge("A", "C", 10);
+//        var path = graph.getShortestPath("A", "C" );
+//        System.out.println(path);
+        System.out.println(graph.hasCycle());
 
     }
 }
+

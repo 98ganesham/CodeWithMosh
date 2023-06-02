@@ -18,7 +18,9 @@ public class Queues{
     queue.add(77);
     queue.add(-12);
     queue.add(-15);
-    System.out.println(queue);
+   var first = queue.remove(99);
+        System.out.println(first);
+        System.out.println(queue);
 
     }
 }

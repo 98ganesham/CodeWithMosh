@@ -12,7 +12,7 @@ public class LinkedList {
     }
     private Node first ;
     private Node last ;
-    private int size;
+    private int size = 0;
     public void addLast (int item){
         var node  = new Node(item);
         if (isEmpty())
@@ -57,8 +57,7 @@ public class LinkedList {
             throw new NoSuchElementException();
         if (first == last)
             first = last = null;
-
-            var previous = getPrevious(last);
+         var previous = getPrevious(last);
             last = previous;
             last.next = null;
 

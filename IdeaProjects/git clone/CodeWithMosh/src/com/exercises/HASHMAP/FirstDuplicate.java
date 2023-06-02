@@ -2,7 +2,7 @@
 
 import java.util.*;
 
-public class CharFinder {
+public class FirstDuplicate {
 
     public static int firstRepeatingElement(int[] arr, int n) {
 
@@ -17,18 +17,17 @@ public class CharFinder {
 
         return -1;
     }
+
     public static void main(String[] args) {
 
-        int[] arr = {1,3,3,55,6,7,};
+        int[] arr = { 1, 3, 3, 55, 6, 7, };
         int n = arr.length;
 
         int index = firstRepeatingElement(arr, n);
 
-
         if (index == -1) {
             System.out.println("No repeating element found!");
-        }
-        else {
+        } else {
 
             System.out.println("First repeating element is " + arr[index]);
         }
